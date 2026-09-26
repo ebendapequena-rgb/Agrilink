@@ -35,7 +35,15 @@ export default async function handler(req: any, res: any) {
   }
 
   try {
-    const { producerLocation, currentProducts } = req.body || {};
+    let payload = req.body;
+    if (typeof payload === 'string') {
+      try {
+        payload = JSON.parse(payload);
+      } catch {
+        // keep as is
+      }
+    }
+    const { producerLocation, currentProducts } = payload || {};
 
     if (!ai && process.env.GEMINI_API_KEY) {
       try {

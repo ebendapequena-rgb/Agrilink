@@ -36,7 +36,15 @@ export default async function handler(req: any, res: any) {
   }
 
   try {
-    const { query, products } = req.body || {};
+    let payload = req.body;
+    if (typeof payload === 'string') {
+      try {
+        payload = JSON.parse(payload);
+      } catch {
+        // keep as is
+      }
+    }
+    const { query, products } = payload || {};
 
     if (!query || typeof query !== 'string') {
       return res.status(400).json({ error: 'La requête de recherche est requise.' });

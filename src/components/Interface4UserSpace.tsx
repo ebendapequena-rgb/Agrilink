@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { UserRole, Order, Product, CategoryId } from '../types';
-import { CATEGORIES } from '../data/mockData';
+import { CATEGORIES, PHOTO_PRESETS } from '../data/mockData';
 import {
   Package,
   TrendingUp,
@@ -47,7 +47,7 @@ export const Interface4UserSpace: React.FC<Interface4UserSpaceProps> = ({
   const [newProductQty, setNewProductQty] = useState('');
   const [newProductPrice, setNewProductPrice] = useState('');
   const [newProductLocation, setNewProductLocation] = useState('Yaoundé - Obala');
-  const [selectedPhotoPreset, setSelectedPhotoPreset] = useState('/src/assets/images/fresh_tomatoes_crate_1790426453274.jpg');
+  const [selectedPhotoPreset, setSelectedPhotoPreset] = useState(PHOTO_PRESETS[0].path);
 
   // Rating modal state for buyer
   const [ratingOrderId, setRatingOrderId] = useState<string | null>(null);
@@ -772,13 +772,7 @@ export const Interface4UserSpace: React.FC<Interface4UserSpaceProps> = ({
                   Photo du produit :
                 </label>
                 <div className="grid grid-cols-5 gap-2 pt-1">
-                  {[
-                    { path: '/src/assets/images/fresh_tomatoes_crate_1790426453274.jpg', label: 'Tomates' },
-                    { path: '/src/assets/images/plantain_bananas_bunch_1790426467227.jpg', label: 'Plantain' },
-                    { path: '/src/assets/images/yellow_corn_maize_1790426479614.jpg', label: 'Maïs' },
-                    { path: '/src/assets/images/cassava_manioc_roots_1790426493641.jpg', label: 'Manioc' },
-                    { path: '/src/assets/images/green_leafy_vegetables_1790426503204.jpg', label: 'Légumes' },
-                  ].map((preset) => (
+                  {PHOTO_PRESETS.map((preset) => (
                     <button
                       key={preset.label}
                       type="button"

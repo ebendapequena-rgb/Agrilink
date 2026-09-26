@@ -1,5 +1,19 @@
 import { Category, Product, Order } from '../types';
 
+import freshTomatoesImg from '../assets/images/fresh_tomatoes_crate_1790426453274.jpg';
+import plantainImg from '../assets/images/plantain_bananas_bunch_1790426467227.jpg';
+import yellowCornImg from '../assets/images/yellow_corn_maize_1790426479614.jpg';
+import cassavaImg from '../assets/images/cassava_manioc_roots_1790426493641.jpg';
+import greenLeafyImg from '../assets/images/green_leafy_vegetables_1790426503204.jpg';
+
+export const PHOTO_PRESETS = [
+  { path: freshTomatoesImg, label: 'Tomates' },
+  { path: plantainImg, label: 'Plantain' },
+  { path: yellowCornImg, label: 'Maïs' },
+  { path: cassavaImg, label: 'Manioc' },
+  { path: greenLeafyImg, label: 'Légumes' },
+];
+
 export const CATEGORIES: Category[] = [
   { id: 'cereales', label: 'Céréales', emoji: '🌽', desc: 'Maïs, mil, sorgho' },
   { id: 'legumes', label: 'Légumes', emoji: '🍅', desc: 'Tomates, poivrons, ndoleh' },
@@ -21,7 +35,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: 'kg',
     availableQty: 100,
     minOrder: 5,
-    image: '/src/assets/images/fresh_tomatoes_crate_1790426453274.jpg',
+    image: freshTomatoesImg,
     description: 'Tomates rouges fermes et juteuses, récoltées à maturité sans conservateurs chimiques. Idéales pour sauces, salades et restauration.',
     harvestDate: 'Récoltées ce matin à 6h00',
     rating: 4.9,
@@ -42,7 +56,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: 'régime',
     availableQty: 45,
     minOrder: 1,
-    image: '/src/assets/images/plantain_bananas_bunch_1790426467227.jpg',
+    image: plantainImg,
     description: 'Gros régimes de plantain de variété locale, chair très dense et sucrée. Parfait pour les beignets, frites et braisé.',
     harvestDate: 'Récolté hier après-midi',
     rating: 4.8,
@@ -63,7 +77,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: 'kg',
     availableQty: 300,
     minOrder: 10,
-    image: '/src/assets/images/yellow_corn_maize_1790426479614.jpg',
+    image: yellowCornImg,
     description: 'Grains de maïs jaune de première qualité, séchés naturellement au soleil. Propres, sans charançons, très riches en amidon.',
     harvestDate: 'Récolte de la semaine',
     rating: 4.7,
@@ -84,7 +98,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: 'kg',
     availableQty: 180,
     minOrder: 5,
-    image: '/src/assets/images/cassava_manioc_roots_1790426493641.jpg',
+    image: cassavaImg,
     description: 'Racines de manioc doux très faciles à éplucher et qui cuisent rapidement (manioc fondant). Convient également pour bâtons et farine.',
     harvestDate: 'Arraché ce matin',
     rating: 4.9,
@@ -105,7 +119,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     unit: 'botte',
     availableQty: 75,
     minOrder: 3,
-    image: '/src/assets/images/green_leafy_vegetables_1790426503204.jpg',
+    image: greenLeafyImg,
     description: 'Feuilles fraîches cueillies à l\'aube dans notre potager écologique irrigué à l\'eau de source. Feuilles tendres prêtes pour la préparation.',
     harvestDate: 'Cueillis ce matin à 5h30',
     rating: 5.0,
@@ -122,7 +136,7 @@ export const INITIAL_ORDERS: Order[] = [
     createdAt: 'Aujourd\'hui à 10:15',
     productId: 'prod-1',
     productName: 'Tomates fraîches de plein champ',
-    productImage: '/src/assets/images/fresh_tomatoes_crate_1790426453274.jpg',
+    productImage: freshTomatoesImg,
     farmerName: 'Jean Agricole',
     farmerPhone: '+237 6 99 12 34 56',
     farmerLocation: 'Yaoundé - Obala',
@@ -147,7 +161,7 @@ export const INITIAL_ORDERS: Order[] = [
     createdAt: 'Hier à 16:40',
     productId: 'prod-2',
     productName: 'Régimes de Plantain mûr & vert',
-    productImage: '/src/assets/images/plantain_bananas_bunch_1790426467227.jpg',
+    productImage: plantainImg,
     farmerName: 'Jean Agricole',
     farmerPhone: '+237 6 99 12 34 56',
     farmerLocation: 'Yaoundé - Obala',
