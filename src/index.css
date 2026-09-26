@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-leaf-primary: #15803d;
+    --color-leaf-dark: #14532d;
+    --color-leaf-light: #f0fdf4;
+    --color-leaf-accent: #22c55e;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #F8FAF7;
+    color: #1A2E1F;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Custom scrollbar and accessibility focus rings */
+*:focus-visible {
+  outline: 2px solid #16a34a;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+button, input, select, textarea {
+  font-family: inherit;
+}

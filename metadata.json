@@ -1,0 +1,6 @@
+{
+  "name": "AgriLink - Plateforme Agricole Direct Producteur",
+  "description": "Mise en relation directe entre producteurs agricoles locaux et acheteurs. Produits frais, commande facile et livraison directe.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
